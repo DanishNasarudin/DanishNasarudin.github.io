@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danish - Editor</title>
+    <link rel="stylesheet" href="editor-styles.css" />
+    <div class="nav-container" id="navbar">
+      <button class="button button-back" onclick="window.location.href = './';">
+        D
+      </button>
+      <button class="button button-about">About Me</button>
+      <button class="button button-contact">Contact</button>
+    </div>
+  </head>
+  <body>
+    <div id="overlay-view" onclick="offOverlay()">
+      <div class="overlay-container">
+        <div class="video-panel">
+          <iframe id="video-overlay"></iframe>
+        </div>
+        <div class="video-texts">
+          <div class="video-texts-left">
+            <div id="video-overlay-texts1"></div>
+          </div>
+          <div class="video-texts-right">
+            <div id="video-overlay-texts2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="intro">
+        <div class="intro-title">Optimize. Express. Visual.</div>
+        <div class="intro-desc">
+          Hi, I'm Danish. A self taught video editor with experience in the
+          programming field. My method of video editing revolves around viewer
+          retention techniques.
+        </div>
+      </div>
+      <div class="panel" id="panel-feature">
+        <div class="panel-title">Features</div>
+        <div class="card-container">
+          <button
+            class="card"
+            onclick="onOverlay(videoFeature1,videoFeature1Texts)"
+          >
+            <img
+              src="./assets/video-feature-1.png"
+              alt="f1"
+              class="card-thumb"
+            />
+          </button>
+          <button
+            class="card"
+            onclick="onOverlay(videoFeature2,videoFeature2Texts)"
+          >
+            <img
+              src="./assets/video-feature-2.png"
+              alt="f2"
+              class="card-thumb"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="panel" id="panel-feature">
+        <div class="panel-title">Product Review</div>
+        <div class="card-container">
+          <button class="card" onclick="onOverlay(videoLong1,videoLong1Texts)">
+            <img src="./assets/video-long-1.jpg" alt="l1" class="card-thumb" />
+          </button>
+          <button class="card" onclick="onOverlay(videoLong2,videoLong2Texts)">
+            <img src="./assets/video-long-2.jpg" alt="l2" class="card-thumb" />
+          </button>
+          <button class="card" onclick="onOverlay(videoLong3,videoLong3Texts)">
+            <img src="./assets/video-long-3.jpg" alt="l3" class="card-thumb" />
+          </button>
+        </div>
+      </div>
+      <div class="panel" id="panel-feature">
+        <div class="panel-title">Music Video</div>
+        <div class="card-container">
+          <button class="card" onclick="onOverlay(videoMV1,videoMV1Texts)">
+            <img src="./assets/video-mv-1.jpg" alt="l1" class="card-thumb" />
+          </button>
+          <button class="card" onclick="onOverlay(videoMV2,videoMV2Texts)">
+            <img src="./assets/video-mv-2.jpg" alt="l2" class="card-thumb" />
+          </button>
+          <button class="card" onclick="onOverlay(videoMV3,videoMV3Texts)">
+            <img src="./assets/video-mv-3.jpg" alt="l3" class="card-thumb" />
+          </button>
+        </div>
+      </div>
+      <div class="panel" id="panel-feature">
+        <div class="panel-title">Wedding</div>
+        <div class="card-container">
+          <button
+            class="card"
+            onclick="onOverlay(videoWedding1,videoWedding1Texts)"
+          >
+            <img
+              src="./assets/video-wedding-1.jpg"
+              alt="l1"
+              class="card-thumb"
+            />
+          </button>
+          <button
+            class="card"
+            onclick="onOverlay(videoWedding2,videoWedding2Texts)"
+          >
+            <img
+              src="./assets/video-wedding-2.jpg"
+              alt="l2"
+              class="card-thumb"
+            />
+          </button>
+          <button
+            class="card"
+            onclick="onOverlay(videoWedding3,videoWedding3Texts)"
+          >
+            <img
+              src="./assets/video-wedding-3.jpg"
+              alt="l3"
+              class="card-thumb"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="panel" id="panel-feature">
+        <div class="panel-title">Tutorials</div>
+        <div class="card-container">
+          <button
+            class="card"
+            onclick="onOverlay(videoTutorial1,videoTutorial1Texts)"
+          >
+            <img
+              src="./assets/video-tutorial-1.jpg"
+              alt="l1"
+              class="card-thumb"
+            />
+          </button>
+          <button
+            class="card"
+            onclick="onOverlay(videoTutorial2,videoTutorial2Texts)"
+          >
+            <img
+              src="./assets/video-tutorial-2.jpg"
+              alt="l2"
+              class="card-thumb"
+            />
+          </button>
+          <button
+            class="card"
+            onclick="onOverlay(videoTutorial3,videoTutorial3Texts)"
+          >
+            <img
+              src="./assets/video-tutorial-3.jpg"
+              alt="l3"
+              class="card-thumb"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="panel" id="panel-feature">
+        <div class="panel-title">High Views</div>
+        <div class="card-container">
+          <button class="card" onclick="onOverlay(videoHigh1,videoHigh1Texts)">
+            <img src="./assets/video-high-1.jpg" alt="l1" class="card-thumb" />
+          </button>
+          <button class="card" onclick="onOverlay(videoHigh2,videoHigh2Texts)">
+            <img src="./assets/video-high-2.jpg" alt="l2" class="card-thumb" />
+          </button>
+          <button class="card" onclick="onOverlay(videoHigh3,videoHigh3Texts)">
+            <img src="./assets/video-high-3.jpg" alt="l3" class="card-thumb" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
